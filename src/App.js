@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import RedContainer from './RightPanel/RightPanel';
 import './App.css';
+import CalendarComponent from './CalendarComponent/CalendarComponent';
+import NotificationCenter from './NotificationCenter/NotificationCenter';
+import NotificationCard from './NotificationCards/NotificationCards';
+
+const notification = [
+  'Notificación 1',
+  'Notificación 2',
+  'Notificación 3',
+
+
+];
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    <div className="MainPanel">
+
+      <div className="right-panel">
+        <RedContainer />
+
+
+        <div className="calendar-and-notifications">
+          <div className="calendar">
+            <CalendarComponent />
+          </div>
+          <div className="notifications">
+            <NotificationCenter />
+          </div>
+
+          <div className="NotificationCard">
+          <NotificationCard notifications={notification} />
+          </div>
+        </div>
+
+      </div>
+
     </div>
+
   );
 }
 
 export default App;
+
