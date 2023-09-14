@@ -40,23 +40,18 @@
 .right-panel {
   margin-left: 75%;
   margin-top: 80px;
-  width: 23%; /* Ancho del contenedor al 50% de la pantalla */
-  height: 100vh; /* Altura del contenedor al 100% de la altura de la pantalla */
+  max-width: 60%; /* Ancho del contenedor al 50% de la pantalla */
+  min-height: 100vh;
   background-color: #dddcdc; /* Color de fondo gris */
   display: flex;
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-  align-items: center;
   flex-direction: column; /* Para centrar verticalmente */
-  height: 100%; /* Ajusta la altura al 100% del contenedor */
   
 
-}
-.MainPanel {
-height: 900px;
-  
 
 }
+
 .notifications {
   margin-top: 60px;
     
