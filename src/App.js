@@ -5,6 +5,7 @@ import NotificationCenter from './NotificationCenter/NotificationCenter';
 import NotificationCard from './NotificationCards/NotificationCards';
 import SlideBar from './SlideBar/SlideBar';
 import Navbar from './NavbarStudents/NavbarStudents/NavbarDashboardStudents';
+import Carousel from './Carousel/Carousel';
 
 const notification = [
   'Notificación 1',
@@ -24,39 +25,35 @@ function App() {
     </div>
     <div class="col-11">
       <Navbar />
-      <div className='row' style={{display:'flex'}}>
-        <div>
-          
+      <div style={{display:'flex', textAlign: 'center', marginLeft:'25px'}}>
+        <div class="col-5">
+          <Carousel/>
         </div>
-        <div>
-        <div className="MainPanel">
+        <div class="col-4" style={{display:'flex', textAlign: 'center'}}>
+     
+            <div className="right-panel" >
+              <RedContainer />
 
-<div className="right-panel">
-  <RedContainer />
 
+              <div className="calendar-and-notifications">
+                <div className="calendar">
+                  <CalendarComponent />
+                </div>
+                <div className="notifications">
+                  <NotificationCenter />
+                </div>
 
-  <div className="calendar-and-notifications">
-    <div className="calendar">
-      <CalendarComponent />
-    </div>
-    <div className="notifications">
-      <NotificationCenter />
-    </div>
+                <div className="NotificationCard">
+                <NotificationCard notifications={notification} />
+                </div>
+              </div>
 
-    <div className="NotificationCard">
-    <NotificationCard notifications={notification} />
-    </div>
-  </div>
+            </div>
 
-</div>
-
-</div>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-
-
     
 
   );
